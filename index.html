@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+   <style type="text/css">
+   	body {background:grey;}*{margin: 0; padding: 0; box-sizing: border-box;}
+   	header {display: flex; align-items: center; justify-content: center; min-height: 100vh;}
+   	nav {width: 100px; height: 600px; box-shadow: 0 0 12px black; position: relative; display: flex; justify-content: center; }
+   	ul {list-style-type: none;}
+   	li {position: relative; display: flex; position: relative; top: 0px; align-items: center; margin-top: 70px;}
+   	.photo2 {width: 50px; height: 50px; border-radius: 5px; text-shadow: 0 0 10px white; cursor: pointer;}
+    div { display: flex;  cursor: pointer; color: white; width: 240px; border-radius: 10px; box-shadow: 0 0 20px black; height: 80px; position: absolute; left: -20px; visibility: hidden; 
+    	top: 0; align-items: center; top: -15px;}
+    	div:after {position: absolute; content: ''; width:0;height: 0; border-width: 12px; border-style: solid; border-color: black transparent transparent transparent; transform: rotate(-270deg); right: 240px;}
+  	.photo1 {width: 50px; height: 50px; border-radius: 5px; text-shadow: 0 0 10px white; cursor: pointer; position: relative; left: 8px;}
+  	span {position: relative; left: 13px; color: white; text-shadow:0 0 3px white; font-family: sans-serif; font-weight: bold;}
+  	li.active div, li:hover div {visibility: visible; left: 100px;  transition: 0.8s;}
+  h5{opacity: 0.7;}
+   </style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li>
+				<div><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQE3aOp3cdsq6A/company-logo_200_200/0/1641456287876?e=2147483647&v=beta&t=EQB1wMGJ4KchW8RtWR3OC1CbyHWqMuECvvgcw3knimI" class="photo1"><span><h4>CLARUSWAY</h4><h5>BOOTCAMP</h5></span></div>
+				<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQE3aOp3cdsq6A/company-logo_200_200/0/1641456287876?e=2147483647&v=beta&t=EQB1wMGJ4KchW8RtWR3OC1CbyHWqMuECvvgcw3knimI" class="photo2">
+			</li>
+			<li>
+				<div><img src="https://media-exp1.licdn.com/dms/image/C4E03AQGYTfDVuTekdw/profile-displayphoto-shrink_100_100/0/1646331015779?e=1656547200&v=beta&t=4wWEFtZ9easZgFBKA0jAFHOOjFLHPI1FBeTAU-XkkMM" class="photo1"><span><h4>KAAN ŞAHİN</h4><h5>WEP DEVELOPER</h5></span></div>
+				<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGYTfDVuTekdw/profile-displayphoto-shrink_100_100/0/1646331015779?e=1656547200&v=beta&t=4wWEFtZ9easZgFBKA0jAFHOOjFLHPI1FBeTAU-XkkMM" class="photo2">
+			</li>
+			<li>
+				<div><img src="https://media-exp1.licdn.com/dms/image/C4E03AQFGsEk7g-nQjg/profile-displayphoto-shrink_100_100/0/1575891316341?e=1656547200&v=beta&t=aaEMEFACAr5Jg6w9rsq6ZjTra2LAuioI578np5KQ-ww" class="photo1"><span><h4>ALEX DUNCAN</h4><h5>BACK-END DEVELOPER</h5></span></div>
+				<img src="https://media-exp1.licdn.com/dms/image/C4E03AQFGsEk7g-nQjg/profile-displayphoto-shrink_100_100/0/1575891316341?e=1656547200&v=beta&t=aaEMEFACAr5Jg6w9rsq6ZjTra2LAuioI578np5KQ-ww" class="photo2">
+			</li>
+			<li>
+				<div><img src="https://media-exp1.licdn.com/dms/image/C4E03AQELlZAx3ZmQjg/profile-displayphoto-shrink_100_100/0/1560946142781?e=1656547200&v=beta&t=X3SVzTnTwcfMkg5PuSx8eFRP5z80xXJBrEflOFmiDCQ" class="photo1"><span><h4>OLİVİA BROWN</h4><h5>FRONT-END DEVELOPER</h5></span></div>
+				<img src="https://media-exp1.licdn.com/dms/image/C4E03AQELlZAx3ZmQjg/profile-displayphoto-shrink_100_100/0/1560946142781?e=1656547200&v=beta&t=X3SVzTnTwcfMkg5PuSx8eFRP5z80xXJBrEflOFmiDCQ" class="photo2">
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<script type="text/javascript">
+	const li = document.querySelectorAll('li');
+	function activeLink(){
+		li.forEach((item) =>
+		item.classList.remove('active'));
+		this.classList.add('active');
+	}
+	li.forEach((item) =>
+	item.addEventListener('click',activeLink))
+</script>
+</body>
+</html>
